@@ -19,8 +19,6 @@
 
     --line-preset-1: 1.5;
 
-
-    --pic-radius: 400px;
     --card-radius: 12px;
     --link-radius: 8px;
 
@@ -67,6 +65,26 @@ body {
     display: block;
   }
 
+  .card {
+    background-color: var(--grey-800);
+    border-radius: var(--card-radius);
+    width: 100%;
+    padding: var(--space-300);
+
+    @media (min-width: 400px) {
+      padding: var(--space-500);
+    }
+  }
+
+  .card__image img {
+    margin-inline: auto;
+    width: 33%;
+    height: 33%;
+    object-fit: cover;
+    border-radius: 50%;
+
+  }
+
   .flow > * + * {
     margin-block-start: var(--flow-space, var(--space-300));
   }
@@ -77,6 +95,10 @@ body {
     place-items: center;
     min-height: 100vh;
     padding: var(--space-300) max(var(--space-300), calc(50% - var(--max-child-width)/2));
+  }
+
+  .align-center {
+    text-align: center;
   }
 
   .button {
@@ -103,4 +125,13 @@ body {
 .button:focus {
     background-color: var(--green);
     color: var(--grey-900);
+}
+
+.info * {
+  --flow-space: var(--space-50);
+
+}
+
+.links ul {
+  --flow-space: var(--space-200);
 }

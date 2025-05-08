@@ -63,3 +63,29 @@ body {
     max-width: 100%;
     display: block;
   }
+
+  .button {
+    --link-color: var(--grey-700);
+    --link-text-color: var(--white);
+
+    cursor: pointer;
+    background-color: var(--link-color);
+    color: var(--link-text-color);
+    border: 0;
+    border-radius: var(--link-radius);
+    text-decoration: none;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+
+    display: block;
+    width: 100%;
+    padding: var(--space-150);
+
+  }
+  
+  .button:hover,
+.button:focus {
+    background-color: var(--green);
+    color: var(--grey-900);
+}

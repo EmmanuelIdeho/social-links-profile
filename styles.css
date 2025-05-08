@@ -1,6 +1,5 @@
 :root {
-    --mobile-width: 375px;
-    --desktop-width: 1440px;
+    --max-width: 456px;
 
     --green: hsl(75, 94%, 57%);
     --white: hsl(0, 0%, 100%);
@@ -26,6 +25,10 @@
     --link-radius: 8px;
 
     --font-sans: "Inter", sans-serif;
+
+    @media (min-width: 800px){
+      --max-width: 384px;
+    }
 }
 
 * {
@@ -62,6 +65,18 @@ body {
   img, picture {
     max-width: 100%;
     display: block;
+  }
+
+  .flow > * + * {
+    margin-block-start: var(--flow-space, var(--space-300));
+  }
+
+  .wrapper {
+    --max-child-width: var(--max-width, 320px);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: var(--space-300) max(var(--space-300), calc(50% - var(--max-child-width)/2));
   }
 
   .button {

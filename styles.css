@@ -8,11 +8,24 @@
     --grey-800: hsl(0, 0%, 12%);
     --grey-900: hsl(0, 0%, 8%);
 
-    --text-preset: 16px;
+    --space-50: 4px;
+    --space-100: 8px;
+    --space-150: 12px;
+    --space-200: 16px;
+    --space-300: 24px;
+    --space-500: 40px;
+
+    --text-preset-1: 24px;
+    --text-preset-2: 14px;
+
+    --line-preset-1: 1.5;
+
 
     --pic-radius: 400px;
-    --card-radius: 15px;
-    --label-radius: 20px;
+    --card-radius: 12px;
+    --link-radius: 8px;
+
+    --font-sans: "Inter", sans-serif;
 }
 
 * {
@@ -23,48 +36,30 @@
 
 
 body {
+    color: var(--white);
     background-color: var(--grey-900);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-sans);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--text-preset);
+    font-size: var(--text-preset-2);
+    line-height: var(--line-preset-1);
   }
 
-  
-  img {
-    justify-self: center;
-    border-radius: var(--pic-radius);
-    width: 100px;
-    height: 100px;
+  h2 {
+    font-weight: 600;
+    font-size: var(--text-preset-1);
   }
 
-
-
-  .card {
-    background-color: var(--grey-800);
-    border-radius: var(--card-radius);
-    justify-items: center;
-  }
-
-  .name, .link, .quotation {
-    color: var(--white);
-    justify-self: center;
-  }
-
-
-  .card__content {
-    justify-content: center;
-  }
-
-  .location {
+  strong {
     color: var(--green);
-    justify-self: center;
   }
 
-.challenge-wrapper {
-    --max-child-width: var(--desktop-width, 320px);
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-}
+  ul[role=list] {
+    list-style: none;
+  }
+
+  img, picture {
+    max-width: 100%;
+    display: block;
+  }
